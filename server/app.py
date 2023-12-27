@@ -8,6 +8,7 @@ from flask_restful import Resource
 from sqlalchemy.exc import IntegrityError
 from config import app, db, api
 from datetime import date, datetime
+from models import Defect
 
 @app.route('/')
 @app.route('/<int:id>')

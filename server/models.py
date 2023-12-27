@@ -1,7 +1,7 @@
 from sqlalchemy.ext.hybrid import hybrid_property
 from config import db, bcrypt
 
-class Defect(db.Modle):
+class Defect(db.Model):
     __tablenanme__ = "defects"
 
     __table_args__ = (
