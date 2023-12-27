@@ -19,6 +19,8 @@ class Defect(db.Model):
     application = db.Column(db.String)
     app_version = db.Column(db.String)
     host = db.Column(db.String)
+    browser = db.Column(db.String)
+    browser_version = db.Column(db.String)
     desc = db.Column(db.String,nullable=False)
     comments = db.Column(db.String)
     status = db.Column(db.Boolean, nullable=False)
