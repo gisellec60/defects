@@ -19,9 +19,11 @@ with app.app_context():
     browsers = ["Chrome", "Firefox","Safari","Edge"]
     browser_ver = ["3.4", "11.0", "17,8", "13","22.3"]
     hosts = ["R64", "Win", "WX6", "MVS", "Mac", "Redhat"]
+    titles = ["Unable to show file name", "printing the wrong name", "Not able to change name","Printing Message twice"]
     for _ in range (30):
         defect = Defect (
             defectId = 'P' + str(random.randint(100,1000)),
+            title = rc(titles),
             open_date = fake.date_this_month(after_today=True),
             close_date = fake.date_this_month(after_today=True),
             username = fake.free_email(),
@@ -34,7 +36,8 @@ with app.app_context():
             host = rc(hosts),
             desc = fake.paragraph(nb_sentences=5),
             comments = fake.paragraph(nb_sentences=5),
-            status = fake.boolean(chance_of_getting_true=30),
+            status = "Open",
+            isalert = fake.boolean(chance_of_getting_true=10),
             interested_party = fake.free_email(),
             num_days =  random.randint(1,300),
         )

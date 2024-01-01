@@ -10,6 +10,7 @@ class Defect(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     defectId = db.Column(db.Integer, nullable=False)
+    title = db.Column(db.String, nullable=False)
     open_date = db.Column(db.Date, nullable=False)
     close_date = db.Column(db.Date, nullable=False)
     username = db.Column(db.String)
@@ -23,7 +24,8 @@ class Defect(db.Model):
     browser_version = db.Column(db.String)
     desc = db.Column(db.String,nullable=False)
     comments = db.Column(db.String)
-    status = db.Column(db.Boolean, nullable=False)
+    status = db.Column(db.String, nullable=False)
+    isalert = db.Column(db.Boolean)
     interested_party = db.Column(db.String)
     num_days = db.Column(db.Integer, nullable=False)
 
