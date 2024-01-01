@@ -1,0 +1,23 @@
+.noWrap {
+    flex-wrap: nowrap;
+}
+
+.productions-heading {
+    position:relative;
+    top: -290px;
+    text-transform: uppercase; 
+    font-family:Arial, sans-serif;
+    width:70px;
+    font-size: 70px;
+    line-height: .8;
+    margin-left: 5%;
+    margin-top: 20%;
+    padding-bottom: 5%;
+    transform: scale(.7, 1.4);
+    color:black;
+    left:750px;    
+}
+
+.col {
+    background-color: grey;
+}
